@@ -1,0 +1,12 @@
+deployedContract.deploy({
+  data: bytecode,
+  argument: [['Rama', 'Nick', 'Jose'].map(name => web3.utils.asciiToHex(name))]
+)}.send({
+from: '0x4D7aA0C018a5A0bE2BAb5e53ec6096848389AD39',
+gas: 1500000,
+gasPrice: web3,utils.toWei('0.0003', 'ether')
+}).then((newContractInstance)=>{
+deployedContract.options.address = newContractInstance.options.address;
+)
+}) 
+web3.utils.asciiToHex('Rama')
