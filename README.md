@@ -1,5 +1,5 @@
-# dapp-prac
-
+## main 투표
+## pracContracts 아트풍경거래
 ```
 npm install ganache web3 solc
 ```
