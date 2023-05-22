@@ -13,7 +13,7 @@ contract MintArtLandmarkToken is ERC721Enumerable {
         function mintArtLandmarkToken() public{
             uint256 landmarkTokenId = totalSupply() + 1;
 
-            uint256 landmarkTypes = uint256(keccak256(abi.encodePacked(block.timestamp, msg.sender, landmarkTokenId)));
+            uint256 landmarkTypes = uint256(keccak256(abi.encodePacked(block.timestamp, msg.sender, landmarkTokenId))) % 5 + 1;
 
             _mint(msg.sender, landmarkTokenId);
         }
